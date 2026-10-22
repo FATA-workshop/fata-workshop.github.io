@@ -1,0 +1,540 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>FATA Workshop | COLING 2027</title>
+  <meta name="description" content="FATA Workshop: First Workshop on Community-Based and Socially Aware Approaches to Natural Language Processing.">
+
+  <style>
+    :root {
+      --green: #28443b;
+      --green-light: #e9eee9;
+      --cream: #f8f7f2;
+      --text: #26332e;
+      --muted: #66716b;
+      --line: #dedfd8;
+      --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.7;
+    }
+
+    a {
+      color: var(--green);
+    }
+
+    .container {
+      width: min(1080px, 90%);
+      margin: 0 auto;
+    }
+
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(255, 255, 255, 0.97);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav-inner {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .logo {
+      color: var(--green);
+      text-decoration: none;
+      font-family: Georgia, serif;
+      font-size: 1.4rem;
+      font-weight: bold;
+      white-space: nowrap;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 600;
+    }
+
+    nav a:hover,
+    .text-link:hover {
+      text-decoration: underline;
+    }
+
+    .hero {
+      background: var(--cream);
+      border-bottom: 1px solid var(--line);
+      padding: 100px 0 90px;
+    }
+
+    .eyebrow {
+      color: var(--green);
+      font-size: 0.8rem;
+      font-weight: bold;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    h1, h2, h3 {
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.2;
+      color: var(--green);
+    }
+
+    h1 {
+      max-width: 850px;
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      letter-spacing: -0.04em;
+      margin: 18px 0;
+    }
+
+    .subtitle {
+      max-width: 780px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(1.15rem, 2.5vw, 1.65rem);
+      line-height: 1.5;
+    }
+
+    .event-details {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 28px;
+      margin: 30px 0;
+      color: var(--muted);
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 20px;
+      border: 1px solid var(--green);
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .button-primary {
+      color: var(--white);
+      background: var(--green);
+    }
+
+    .button-primary:hover {
+      background: #1c322a;
+    }
+
+    .button-secondary:hover {
+      background: var(--green-light);
+    }
+
+    section {
+      padding: 76px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .section-label {
+      margin-bottom: 8px;
+      color: var(--muted);
+      font-size: 0.78rem;
+      font-weight: bold;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      margin: 0 0 22px;
+      font-size: clamp(2rem, 4vw, 2.8rem);
+    }
+
+    h3 {
+      font-size: 1.35rem;
+    }
+
+    .intro {
+      max-width: 760px;
+      font-size: 1.08rem;
+    }
+
+    .topics {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0 40px;
+      margin-top: 30px;
+    }
+
+    .topic {
+      padding: 18px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .topic h3 {
+      margin: 0 0 8px;
+    }
+
+    .topic p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .callout {
+      padding: 30px;
+      background: var(--cream);
+      border: 1px solid var(--line);
+      border-radius: 6px;
+    }
+
+    .dates {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .date-card {
+      padding: 22px;
+      background: var(--cream);
+      border: 1px solid var(--line);
+      border-radius: 5px;
+    }
+
+    .date-card p {
+      margin-bottom: 0;
+      color: var(--muted);
+    }
+
+    .organisers-note {
+      color: var(--muted);
+    }
+
+    footer {
+      padding: 32px 0;
+      color: var(--white);
+      background: var(--green);
+    }
+
+    footer a {
+      color: var(--white);
+    }
+
+    .footer-inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    footer p {
+      margin: 0;
+    }
+
+    @media (max-width: 700px) {
+      .nav-inner {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 18px 0;
+      }
+
+      nav {
+        gap: 12px 16px;
+      }
+
+      .hero {
+        padding: 68px 0;
+      }
+
+      section {
+        padding: 54px 0;
+      }
+
+      .topics,
+      .dates {
+        grid-template-columns: 1fr;
+      }
+
+      .callout {
+        padding: 22px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a class="logo" href="#home">FATA Workshop</a>
+
+      <nav aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#topics">Topics</a>
+        <a href="#cfp">Call for Papers</a>
+        <a href="#dates">Dates</a>
+        <a href="#organisers">Organisers</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container">
+        <p class="eyebrow">COLING 2027 · Macau, China</p>
+
+        <h1>FATA (First Ask Then Act) Workshop</h1>
+
+        <p class="subtitle">
+          First Workshop on Community-Based and Socially Aware
+          Approaches to Natural Language Processing
+        </p>
+
+        <p class="event-details">
+          <span>COLING 2027</span>
+          <span>Macau, China</span>
+          <span>May 9-14, 2027d</span>
+        </p>
+
+        <div class="actions">
+          <a class="button button-primary" href="#cfp">
+            Call for Papers
+          </a>
+          <a class="button button-secondary" href="#about">
+            Learn more
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <p class="section-label">01 / About</p>
+        <h2>Why FATA?</h2>
+
+        <p class="intro">
+          The FATA workshop promotes an interdisciplinary 
+          perspective that connects AI, NLP, and language 
+          studies with human-centered approaches, bringing together researchers and 
+          practitioners from NLP, linguistics, social sciences, and ethics.
+        </p>
+
+        <p>
+          It highlights community-based and participatory methods that 
+          recognize underrepresented communities and low-resources language speakers 
+          as essential stakeholders and knowledge holders throughout the research process.
+        </p>
+
+        <p>
+          Through interdisciplinary dialogue, FATA aims to advance responsible, 
+          transparent, and equitable language technologies that are socially 
+          grounded and responsive to diverse communities’ needs.
+        </p>
+      </div>
+    </section>
+
+    <section id="topics">
+      <div class="container">
+        <p class="section-label">02 / Research themes</p>
+        <h2>Topics of Interest</h2>
+
+        <p>
+          Topics of interest include, but are not limited to:
+        </p>
+
+        <div class="topics">
+          <article class="topic">
+            <h3>Community-based approaches:</h3>
+            <p>
+              Highlighting challenges and limitations of community-based NLP, proposing new approaches, frameworks, 
+              and directions across different research fields.
+            </p>
+          </article>
+
+          <article class="topic">
+            <h3>Data collection and annotation approaches:</h3>
+            <p>
+              Exploring collaborative data collection, crowdsourcing platforms, and limitations of current annotation practices. 
+              Presenting future directions on the role of linguistic technologies in mitigating bias in data collection and annotation.
+            </p>
+          </article>
+
+          <article class="topic">
+            <h3>Intersectionality as a framework:</h3>
+            <p>
+              Investigating how the intersections of different identities and perspectives can be integrated into computational linguistics research, 
+              with particular attention to their implications for bias, exclusion, and marginalization.
+            </p>
+          </article>
+
+          <article class="topic">
+            <h3>Multiple-perspective annotation schemas and tools:</h3>
+            <p>
+              Exploring how schemas, guidelines, and tools can better represent and emphasize 
+              diversity while maintaining annotation quality and consistency.
+            </p>
+          </article>
+
+          <article class="topic">
+            <h3>Bridging NLP and Sociolinguistics:</h3>
+            <p>
+              Welcoming interdisciplinary contributions bringing together linguistics, sociology, 
+              computer science, and related disciplines to explore how these methodologies can 
+              be effectively integrated into NLP research.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="cfp">
+      <div class="container">
+        <p class="section-label">03 / Submissions</p>
+        <h2>Call for Papers</h2>
+
+        <div class="callout">
+          <p>
+            We invite contributions that advance discussion on
+            community-based and socially aware approaches to Natural
+            Language Processing.
+          </p>
+
+          <p>
+            The workshop invites submissions of both long (up to 8 pages) and short 
+            papers (up to 4 pages) including position papers, negative-result papers, 
+            datasets, system demos, and resource papers.
+          </p>
+
+          <p>
+            Submission link will be announced here.
+          </p>
+
+          <!-- Add the official call for papers and submission link here. -->
+        </div>
+      </div>
+    </section>
+
+    <section id="dates">
+      <div class="container">
+        <p class="section-label">04 / Planning</p>
+        <h2>Important Dates</h2>
+
+        <p>
+          Tentative workshop timeline:
+        </p>
+
+        <div class="dates">
+          <article class="date-card">
+            <h3>Submission Deadline</h3>
+            <p>January 5, 2027</p>
+          </article>
+
+          <article class="date-card">
+            <h3>Notification of Acceptance</h3>
+            <p>February 6, 2027</p>
+          </article>
+
+          <article class="date-card">
+            <h3>Camera-ready paper</h3>
+            <p>March 5, 2027</p>
+          </article>
+
+          <article class="date-card">
+            <h3>Proceedings due</h3>
+            <p>April 5, 2027</p>
+          </article>
+
+          <article class="date-card">
+            <h3>Pre-recorded video due</h3>
+            <p>April 15, 2027</p>
+          </article>
+
+          <article class="date-card">
+            <h3>Workshop Date</h3>
+            <p>To be announced</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="organisers">
+      <div class="container">
+        <p class="section-label">05 / People</p>
+        <h2>Organisers</h2>
+
+        <p>
+          The workshop is organised by an interdisciplinary team, with 
+          diverse geographical backgrounds.
+        </p>
+
+        <p class="organisers-note">
+          Aditya Joshi, aditya.joshi@unsw.edu.au 
+        </p>
+
+        <!-- Add organiser names and affiliations here. -->
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <p class="section-label">06 / Get in touch</p>
+        <h2>Contact</h2>
+
+        <p>
+          For questions about the workshop, submissions, or
+          collaboration, please contact the organising team.
+        </p>
+
+        <p>
+          <em>Contact email to be announced.</em>
+        </p>
+
+        <!-- Replace this section with the official contact email. -->
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <div>
+        <p><strong>FATA Workshop</strong></p>
+        <p>COLING 2027 · Macau, China</p>
+      </div>
+
+      <p>
+        First Workshop on Community-Based and Socially Aware
+        Approaches to Natural Language Processing
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>
