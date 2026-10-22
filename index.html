@@ -10,13 +10,17 @@
 
   <style>
     :root {
-      --green: #28443b;
-      --green-light: #e9eee9;
-      --cream: #f8f7f2;
-      --text: #26332e;
-      --muted: #66716b;
-      --line: #dedfd8;
-      --white: #ffffff;
+      --green: #175D69;
+      --green-light: #E8F2F0;
+      --cream: #FAF7EF;
+      --text: #263638;
+      --muted: #647477;
+      --line: #D9E3DF;
+      --white: #FFFFFF;
+      --yellow: #E7B94E;
+      --yellow-light: #FBF2D9;
+      --teal-light: #D6E9E7;
+      --teal-dark: #104751;
     }
 
     * {
@@ -91,6 +95,23 @@
       background: var(--cream);
       border-bottom: 1px solid var(--line);
       padding: 100px 0 100px;
+      position: relative;
+    }
+
+    .hero .eyebrow {
+      color: var(--green);
+    }
+
+    .hero h1 {
+      color: var(--teal-dark);
+    }
+
+    .hero .subtitle {
+      color: var(--text);
+    }
+
+    .hero .event-details {
+      color: var(--muted);
     }
 
     .eyebrow {
@@ -141,24 +162,29 @@
 
     .button {
       display: inline-block;
-      padding: 12px 20px;
+      padding: 13px 22px;
       border: 1px solid var(--green);
-      border-radius: 4px;
+      border-radius: 5px;
       text-decoration: none;
       font-weight: bold;
+      transition: background 0.2s ease, transform 0.2s ease;
     }
 
     .button-primary {
       color: var(--white);
       background: var(--green);
+      border-color: var(--green);
     }
 
     .button-primary:hover {
-      background: #1c322a;
+      background: var(--teal-dark);
+      border-color: var(--teal-dark);
+      transform: translateY(-2px);
     }
 
     .button-secondary:hover {
-      background: var(--green-light);
+      background: var(--yellow-light);
+      border-color: var(--yellow);
     }
 
     section {
@@ -211,9 +237,10 @@
     }
 
     .callout {
-      padding: 30px;
-      background: var(--cream);
+      padding: 32px;
+      background: var(--green-light);
       border: 1px solid var(--line);
+      border-left: 5px solid var(--green);
       border-radius: 6px;
     }
 
@@ -225,10 +252,16 @@
     }
 
     .date-card {
-      padding: 22px;
-      background: var(--cream);
-      border: 1px solid var(--line);
+      padding: 24px;
+      background: var(--yellow-light);
+      border: 1px solid #E9D9AC;
+      border-top: 4px solid var(--yellow);
       border-radius: 5px;
+    }
+
+    .date-card h3 {
+      margin-top: 0;
+      color: var(--teal-dark);
     }
 
     .date-card p {
