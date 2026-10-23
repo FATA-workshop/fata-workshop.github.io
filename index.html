@@ -495,6 +495,88 @@
       }
     }
 
+    /* Important Dates — vertical timeline */
+.timeline {
+  position: relative;
+  max-width: 850px;
+  margin: 36px auto 0;
+  padding-left: 32px;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  bottom: 8px;
+  left: 7px;
+  width: 2px;
+  background: var(--line);
+}
+
+.timeline-item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 24px;
+  padding: 0 0 32px;
+}
+
+.timeline-item:last-child {
+  padding-bottom: 0;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -31px;
+  top: 5px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--green);
+  border: 3px solid var(--white);
+  box-shadow: 0 0 0 1px var(--green);
+}
+
+.timeline-date {
+  color: var(--green);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.timeline-content h3 {
+  margin: 0 0 6px;
+  font-size: 1.15rem;
+  color: var(--text);
+}
+
+.timeline-content p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+@media (max-width: 600px) {
+  .timeline {
+    padding-left: 28px;
+  }
+
+  .timeline-item {
+    grid-template-columns: 1fr;
+    gap: 4px;
+    padding-bottom: 28px;
+  }
+
+  .timeline-item::before {
+    left: -27px;
+  }
+
+  .timeline-date {
+    font-size: 0.82rem;
+  }
+}
+
   </style>
 </head>
 
@@ -540,7 +622,7 @@
 
     <section id="about">
       <div class="container">
-        <p class="section-label">01 / About</p>
+        <p class="section-label">1 / About</p>
         <h2>Why FATA?</h2>
 
         <p>
@@ -559,7 +641,7 @@
 
     <section id="cfp">
       <div class="container">
-        <p class="section-label">02 / Submissions</p>
+        <p class="section-label">2 / Submissions</p>
         <h2>Call for Papers</h2>
 
         <div class="callout">
@@ -626,7 +708,7 @@
 
     <section id="program">
       <div class="container">
-        <p class="section-label">03 / Schedule</p>
+        <p class="section-label">3 / Schedule</p>
         <h2>Workshop Programme</h2>
 
         <div class="callout program-callout">
@@ -639,48 +721,69 @@
     </section>
 
     <section id="dates">
-      <div class="container">
-        <p class="section-label">04 / Planning</p>
-        <h2>Important Dates</h2>
+  <div class="container">
+    <p class="section-label">04 / Planning</p>
+    <h2>Important Dates</h2>
+    <p class="intro">Key deadlines for the FATA Workshop at COLING 2027.</p>
 
-        <div class="dates">
-          <article class="date-card">
-            <h3>Submission Deadline</h3>
-            <p>January 5, 2027</p>
-          </article>
+    <div class="timeline">
 
-          <article class="date-card">
-            <h3>Notification of Acceptance</h3>
-            <p>February 6, 2027</p>
-          </article>
-
-          <article class="date-card">
-            <h3>Camera-ready paper</h3>
-            <p>March 5, 2027</p>
-          </article>
-
-          <article class="date-card">
-            <h3>Proceedings</h3>
-            <p>April 5, 2027</p>
-          </article>
-
-          <article class="date-card">
-            <h3>Pre-recorded video</h3>
-            <p>April 15, 2027</p>
-          </article>
-
-          <article class="date-card">
-            <h3>Workshop Date</h3>
-            <p>To be announced</p>
-          </article>
+      <article class="timeline-item">
+        <div class="timeline-date">JAN 05, 2027</div>
+        <div class="timeline-content">
+          <h3>Submission Deadline</h3>
+          <p>Deadline for paper submissions.</p>
         </div>
-      </div>
-    </section>
+      </article>
 
+      <article class="timeline-item">
+        <div class="timeline-date">FEB 06, 2027</div>
+        <div class="timeline-content">
+          <h3>Notification of Acceptance</h3>
+          <p>Authors are notified of the review outcomes.</p>
+        </div>
+      </article>
+
+      <article class="timeline-item">
+        <div class="timeline-date">MAR 05, 2027</div>
+        <div class="timeline-content">
+          <h3>Camera-ready Papers</h3>
+          <p>Deadline for submitting the final versions of accepted papers.</p>
+        </div>
+      </article>
+
+      <article class="timeline-item">
+        <div class="timeline-date">APR 05, 2027</div>
+        <div class="timeline-content">
+          <h3>Proceedings</h3>
+          <p>Deadline for proceedings-related materials.</p>
+        </div>
+      </article>
+
+      <article class="timeline-item">
+        <div class="timeline-date">APR 15, 2027</div>
+        <div class="timeline-content">
+          <h3>Pre-recorded Video</h3>
+          <p>Deadline for submitting pre-recorded presentations.</p>
+        </div>
+      </article>
+
+      <article class="timeline-item">
+        <div class="timeline-date">TBA</div>
+        <div class="timeline-content">
+          <h3>Workshop Date</h3>
+          <p>The exact date will be announced.</p>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+    
     
 <section id="organisers">
   <div class="container">
-    <p class="section-label">05 / People</p>
+    <p class="section-label">5 / People</p>
     <h2>Organising Committee</h2>
 
     <div class="organiser-grid">
@@ -807,7 +910,7 @@
 
     <section id="contact">
       <div class="container">
-        <p class="section-label">06 / Get in touch</p>
+        <p class="section-label">6 / Get in touch</p>
         <h2>Contact</h2>
 
         <p>
