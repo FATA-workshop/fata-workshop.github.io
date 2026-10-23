@@ -99,45 +99,22 @@
     }
 
     .hero {
-  background-color: #104751;
-  background-image:
-    linear-gradient(
-      to bottom,
-      rgba(16, 71, 81, 0.20) 0%,
-      rgba(16, 71, 81, 0.28) 45%,
-      rgba(16, 71, 81, 0.05) 100%
-    ),
-    url("images/fata-background.png");
-  background-size: cover;
-  background-position: center 60%;
-  background-repeat: no-repeat;
-  border-bottom: 1px solid var(--line);
-  padding: 100px 0;
-  position: relative;
-}
-
-    .hero .eyebrow {
-      color: #FFFFFF;
-      text-shadow: 0 3px 12px rgba(0, 0, 0, 0.25);
-    }
-
-    .hero h1 {
-      color: var(--teal-dark);
-    }
-
-    .hero .hero-tagline {
-      color: #FFFFFF;
-      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
-    }
-
-    .hero .subtitle {
-      color: #FFFFFF;
-      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
-    }
-
-    .hero .event-details {
-      color: #FFFFFF;
-      text-shadow: 0 1px 6px rgba(0, 0, 0, 0.4);
+      background-color: #104751;
+      background-image:
+        linear-gradient(
+          to bottom,
+          rgba(16, 71, 81, 0.10) 0%,
+          rgba(16, 71, 81, 0.08) 48%,
+          rgba(16, 71, 81, 0.20) 100%
+        ),
+        url("images/fata-background.png");
+      background-size: cover;
+      background-position: center bottom;
+      background-repeat: no-repeat;
+      border-bottom: 1px solid var(--line);
+      padding: 64px 0 96px;
+      position: relative;
+      min-height: 700px;
     }
 
     .eyebrow {
@@ -179,6 +156,40 @@
       line-height: 1.45;
     }
 
+    .hero .eyebrow {
+      color: #F5D77D;
+      margin: 0 0 16px;
+      text-shadow: 0 1px 5px rgba(0, 0, 0, 0.28);
+    }
+
+    .hero h1 {
+      color: #FFFFFF;
+      margin: 12px 0 18px;
+      font-size: clamp(3.2rem, 6.4vw, 6rem);
+      text-shadow: 0 3px 18px rgba(0, 0, 0, 0.30);
+    }
+
+    .hero .hero-tagline {
+      color: #FFF8E8;
+      margin: 0 0 22px;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.32);
+    }
+
+    .hero .subtitle {
+      color: #FFFFFF;
+      max-width: 850px;
+      font-size: clamp(1.15rem, 2.1vw, 1.7rem);
+      line-height: 1.4;
+      margin: 0 0 20px;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.65);
+    }
+
+    .hero .event-details {
+      color: #FFFFFF;
+      margin: 18px 0 22px;
+      text-shadow: 0 1px 8px rgba(0, 0, 0, 0.55);
+    }
+
     .event-details {
       display: flex;
       flex-wrap: wrap;
@@ -208,6 +219,17 @@
       color: var(--white);
       background: var(--green);
       border-color: var(--green);
+    }
+
+    .hero .button-secondary {
+      color: #FFFFFF;
+      border-color: rgba(255, 255, 255, 0.9);
+      background: rgba(16, 71, 81, 0.72);
+    }
+
+    .hero .button-secondary:hover {
+      background: rgba(16, 71, 81, 0.92);
+      border-color: #FFFFFF;
     }
 
     .button-primary:hover {
@@ -434,7 +456,9 @@
       }
 
       .hero {
-        padding: 68px 0;
+        padding: 54px 0 72px;
+        min-height: 650px;
+        background-position: center bottom;
       }
 
       section {
@@ -526,7 +550,7 @@
         <h2>Why FATA?</h2>
 
         <p>
-          The <em>First Ask Then Act</em> FATA workshop promotes an interdisciplinary perspective that connects AI, NLP, and language studies with human-centered approaches, bringing together researchers and practitioners from NLP, linguistics, social sciences, and ethics.
+          The FATA workshop promotes an interdisciplinary perspective that connects AI, NLP, and language studies with human-centered approaches, bringing together researchers and practitioners from NLP, linguistics, social sciences, and ethics.
         </p>
 
         <p>
@@ -611,6 +635,10 @@
         <p class="section-label">03 / Schedule</p>
         <h2>Workshop Programme</h2>
 
+        <p class="intro">
+          The detailed programme, including talk titles, speakers, and session times, will be announced soon.
+        </p>
+
         <div class="callout program-callout">
           <h3>Programme coming soon</h3>
           <p>
@@ -668,6 +696,10 @@
   <div class="container">
     <p class="section-label">05 / People</p>
     <h2>Organising Committee</h2>
+
+    <p class="intro">
+      Meet the interdisciplinary team behind the FATA Workshop.
+    </p>
 
     <div class="organiser-grid">
 
