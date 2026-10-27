@@ -341,108 +341,140 @@
       color: var(--muted);
     }
 
-    /* Organising committee cards */
-    .organiser-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 24px;
-      margin-top: 36px;
-      align-items: stretch;
-    }
 
-    .organiser-card {
-      display: flex;
-      flex-direction: column;
-      overflow: hidden;
-      min-width: 0;
-      background: var(--yellow-light);
-      border: 1px solid #E9D9AC;
-      border-top: 4px solid var(--yellow);
-      border-radius: 6px;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
+/* People section */
+.people-subsection {
+  margin-top: 36px;
+}
 
-    .organiser-card:nth-child(3n + 2) {
-      background: var(--green-light);
-      border-color: var(--line);
-      border-top: 4px solid var(--green);
-    }
+.people-heading {
+  margin: 0 0 24px;
+  font-size: 1.8rem;
+  color: var(--green);
+}
 
-    .organiser-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 10px 28px rgba(23, 93, 105, 0.10);
-    }
+.committee-subsection {
+  margin-top: 64px;
+}
 
-    .organiser-photo {
-      width: 100%;
-      aspect-ratio: 4 / 3;
-      display: block;
-      object-fit: cover;
-      object-position: center top;
-      background: var(--teal-light);
-    }
+/* Organiser cards */
+.organiser-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 16px;
+  align-items: stretch;
+}
 
-    .organiser-info {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      flex: 1;
-      padding: 22px;
-    }
+.organiser-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+  background: var(--yellow-light);
+  border: 1px solid #E9D9AC;
+  border-top: 3px solid var(--yellow);
+  border-radius: 6px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
 
-    .organiser-info h3 {
-      margin: 0 0 10px;
-      font-size: 1.3rem;
-      overflow-wrap: anywhere;
-    }
+.organiser-card:nth-child(even) {
+  background: var(--green-light);
+  border-color: var(--line);
+  border-top: 3px solid var(--green);
+}
 
-    .organiser-affiliation {
-      margin: 0;
-      color: var(--muted);
-      font-size: 0.95rem;
-      line-height: 1.5;
-    }
+.organiser-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(23, 93, 105, 0.10);
+}
 
-    .organiser-link {
-      display: inline-block;
-      margin-top: auto;
-      padding-top: 16px;
-      font-size: 0.9rem;
-      font-weight: bold;
-      text-decoration: none;
-    }
+.organiser-photo {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: center 25%;
+  background: var(--teal-light);
+}
 
-    .organiser-link:hover {
-      text-decoration: underline;
-    }
+.organiser-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1;
+  padding: 12px;
+}
 
-    footer {
-      padding: 32px 0;
-      color: var(--white);
-      background: var(--teal-dark);
-      border-top: 5px solid var(--yellow);
-    }
+.organiser-info h3 {
+  margin: 0 0 8px;
+  font-size: 1rem;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
 
-    footer a {
-      color: var(--white);
-    }
+.organiser-affiliation {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.78rem;
+  line-height: 1.5;
+}
 
-    .footer-inner {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 20px;
-    }
+.organiser-link {
+  display: inline-block;
+  margin-top: auto;
+  padding-top: 12px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-decoration: none;
+}
 
-    footer p {
-      margin: 0;
-    }
+.organiser-link:hover {
+  text-decoration: underline;
+}
 
-    @media (max-width: 800px) {
-      .organiser-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-    }
+/* Programme Committee list */
+.committee-list {
+  display: block;
+  list-style: disc;
+  padding-left: 24px;
+  margin: 0;
+}
+
+.committee-list li {
+  padding: 3px 0;
+  color: var(--text);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+/* Responsive layout */
+@media (max-width: 900px) {
+  .organiser-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .organiser-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .organiser-info {
+    padding: 10px;
+  }
+
+  .people-heading {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .organiser-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 
     @media (max-width: 700px) {
       .nav-inner {
@@ -483,16 +515,6 @@
     .program-callout h3 {
       margin-top: 0;
       color: var(--green);
-    }
-
-    @media (max-width: 520px) {
-      .organiser-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .organiser-photo {
-        aspect-ratio: 16 / 10;
-      }
     }
 
     /* Important Dates — vertical timeline */
@@ -577,6 +599,7 @@
   }
 }
 
+
   </style>
 </head>
 
@@ -591,7 +614,7 @@
         <a href="#cfp">Call for Papers</a>
         <a href="#program">Programme</a>
         <a href="#dates">Dates</a>
-        <a href="#organisers">Organisers</a>
+        <a href="#people">People</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
@@ -773,130 +796,146 @@
   </div>
 </section>
     
-    
-<section id="organisers">
+
+<section id="people">
   <div class="container">
+
     <p class="section-label">5 / People</p>
-    <h2>Organising Committee</h2>
+    <h2>People</h2>
 
-    <div class="organiser-grid">
+    <!-- Organisers -->
+    <div class="people-subsection">
+      <h3 class="people-heading">Organisers</h3>
 
-      <!-- Organiser 1 -->
-      <article class="organiser-card">
-        <img
-          class="organiser-photo"
-          src="images/organiser-1.jpg"
-          alt="Portrait of Aditya Joshi"
-          loading="lazy"
-        >
-        <div class="organiser-info">
-          <h3>Aditya Joshi</h3>
-          <p class="organiser-affiliation">
-            School of Computer Science and Engineering<br>
-            University of New South Wales (Australia)
-          </p>
-          <a class="organiser-link"
-             href="https://www.unsw.edu.au/staff/aditya-joshi"
-             target="_blank"
-             rel="noopener noreferrer">
-            Senior Lecturer
-          </a>
-        </div>
-      </article>
+      <div class="organiser-grid">
 
-      <!-- Organiser 2 -->
-      <article class="organiser-card">
-        <img
-          class="organiser-photo"
-          src="images/organiser-2.jpg"
-          alt="Portrait of Lia Draetta"
-          loading="lazy"
-        >
-        <div class="organiser-info">
-          <h3>Lia Draetta</h3>
-          <p class="organiser-affiliation">
-            Department of Computer Science<br>
-            University of Turin (Italy)
-          </p>
-          <a class="organiser-link"
-             href="https://ccc.di.unito.it/people-lia-draetta/"
-             target="_blank"
-             rel="noopener noreferrer">
-            PhD Student
-          </a>
-        </div>
-      </article>
+        <article class="organiser-card">
+          <img
+            class="organiser-photo"
+            src="images/organiser-1.jpg"
+            alt="Portrait of Aditya Joshi"
+            loading="lazy"
+          >
+          <div class="organiser-info">
+            <h3>Aditya Joshi</h3>
+            <p class="organiser-affiliation">
+              School of Computer Science and Engineering<br>
+              University of New South Wales, Australia
+            </p>
+            <a class="organiser-link"
+               href="https://www.unsw.edu.au/staff/aditya-joshi"
+               target="_blank"
+               rel="noopener noreferrer">
+              Senior Lecturer
+            </a>
+          </div>
+        </article>
 
-      <!-- Organiser 3 -->
-      <article class="organiser-card">
-        <img
-          class="organiser-photo"
-          src="images/organiser-3.jpg"
-          alt="Portrait of Chiara Ferrando"
-          loading="lazy"
-        >
-        <div class="organiser-info">
-          <h3>Chiara Ferrando</h3>
-          <p class="organiser-affiliation">
-            Department of Computer Science<br>
-            University of Turin (Italy)
-          </p>
-          <a class="organiser-link"
-             href="https://ccc.di.unito.it/people-chiara-ferrando/"
-             target="_blank"
-             rel="noopener noreferrer">
-            PhD Student
-          </a>
-        </div>
-      </article>
+        <article class="organiser-card">
+          <img
+            class="organiser-photo"
+            src="images/organiser-2.jpg"
+            alt="Portrait of Lia Draetta"
+            loading="lazy"
+          >
+          <div class="organiser-info">
+            <h3>Lia Draetta</h3>
+            <p class="organiser-affiliation">
+              Department of Computer Science<br>
+              University of Turin, Italy
+            </p>
+            <a class="organiser-link"
+               href="https://ccc.di.unito.it/people-lia-draetta/"
+               target="_blank"
+               rel="noopener noreferrer">
+              PhD Student
+            </a>
+          </div>
+        </article>
 
-      <!-- Organiser 4 -->
-      <article class="organiser-card">
-        <img
-          class="organiser-photo"
-          src="images/organiser-4.jpg"
-          alt="Portrait of Adriana Pagano"
-          loading="lazy"
-        >
-        <div class="organiser-info">
-          <h3>Adriana Pagano</h3>
-          <p class="organiser-affiliation">
-            Applied Linguistics<br>
-            Federal University of Minas Gerais (Brazil)
-          </p>
-          <a class="organiser-link"
-             href="https://somos.ufmg.br/professor/adriana-silvina-pagano"
-             target="_blank"
-             rel="noopener noreferrer">
-            Full Professor
-          </a>
-        </div>
-      </article>
+        <article class="organiser-card">
+          <img
+            class="organiser-photo"
+            src="images/organiser-3.jpg"
+            alt="Portrait of Chiara Ferrando"
+            loading="lazy"
+          >
+          <div class="organiser-info">
+            <h3>Chiara Ferrando</h3>
+            <p class="organiser-affiliation">
+              Department of Computer Science<br>
+              University of Turin, Italy
+            </p>
+            <a class="organiser-link"
+               href="https://ccc.di.unito.it/people-chiara-ferrando/"
+               target="_blank"
+               rel="noopener noreferrer">
+              PhD Student
+            </a>
+          </div>
+        </article>
 
-      <!-- Organiser 5 -->
-      <article class="organiser-card">
-        <img
-          class="organiser-photo"
-          src="images/organiser-5.jpg"
-          alt="Portrait of Viviana Patti"
-          loading="lazy"
-        >
-        <div class="organiser-info">
-          <h3>Viviana Patti</h3>
-          <p class="organiser-affiliation">
-            Department of Computer Science<br>
-            University of Turin
-          </p>
-          <a class="organiser-link"
-             href="https://ccc.di.unito.it/people-viviana-patti/"
-             target="_blank"
-             rel="noopener noreferrer">
-            Full Professor
-          </a>
-        </div>
-      </article>
-      
+        <article class="organiser-card">
+          <img
+            class="organiser-photo"
+            src="images/organiser-4.jpg"
+            alt="Portrait of Adriana Pagano"
+            loading="lazy"
+          >
+          <div class="organiser-info">
+            <h3>Adriana Pagano</h3>
+            <p class="organiser-affiliation">
+              Applied Linguistics<br>
+              Federal University of Minas Gerais, Brazil
+            </p>
+            <a class="organiser-link"
+               href="https://somos.ufmg.br/professor/adriana-silvina-pagano"
+               target="_blank"
+               rel="noopener noreferrer">
+              Full Professor
+            </a>
+          </div>
+        </article>
+
+        <article class="organiser-card">
+          <img
+            class="organiser-photo"
+            src="images/organiser-5.jpg"
+            alt="Portrait of Viviana Patti"
+            loading="lazy"
+          >
+          <div class="organiser-info">
+            <h3>Viviana Patti</h3>
+            <p class="organiser-affiliation">
+              Department of Computer Science<br>
+              University of Turin, Italy
+            </p>
+            <a class="organiser-link"
+               href="https://ccc.di.unito.it/people-viviana-patti/"
+               target="_blank"
+               rel="noopener noreferrer">
+              Full Professor
+            </a>
+          </div>
+        </article>
+
+      </div>
     </div>
+
+    <!-- Programme Committee -->
+    <div class="people-subsection committee-subsection">
+      <h3 class="people-heading">Programme Committee</h3>
+
+      <ul class="committee-list">
+        <li>Marco Roberti</li>
+        <li>Chiara Di Bonaventura</li>
+        <li>Silvia Casola</li>
+        <li>Erik Bran Marino</li>
+        <li>Pierluigi Cassotti</li>
+        <li>Elisa Bassignana</li>
+      </ul>
+    </div>
+
   </div>
 </section>
 
