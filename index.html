@@ -658,16 +658,6 @@ footer p {
       padding: 22px 24px;
     }
 
-    .topic-num {
-      display: block;
-      font-family: "Libre Baskerville", Georgia, serif;
-      font-size: 1.4rem;
-      font-weight: 700;
-      line-height: 1;
-      color: var(--yellow);
-      margin-bottom: 10px;
-    }
-
     .topic-card h4 {
       margin: 0 0 8px;
       font-size: 1.05rem;
@@ -680,13 +670,6 @@ footer p {
       font-size: 0.95rem;
       line-height: 1.6;
       color: var(--muted);
-    }
-
-    .encourage {
-      background: var(--yellow-light);
-      border-left: 4px solid var(--yellow);
-      border-radius: 8px;
-      padding: 16px 20px;
     }
 
     .types-table {
@@ -705,21 +688,15 @@ footer p {
     }
 
     .types-table thead th {
-      background: var(--green);
-      color: var(--white);
       font-size: 0.85rem;
       font-weight: 600;
       letter-spacing: 0.04em;
       text-transform: uppercase;
+      border-bottom: 2px solid var(--text);
     }
 
     .types-table tbody th {
       font-weight: 600;
-      color: var(--teal-dark);
-    }
-
-    .types-table tbody tr:nth-child(even) {
-      background: var(--green-light);
     }
 
     .types-table td.pages {
@@ -738,10 +715,6 @@ footer p {
       grid-template-columns: 2fr 1fr;
       gap: 32px;
       margin-top: 16px;
-      padding: 28px 32px;
-      background: var(--green-light);
-      border: 1px solid var(--line);
-      border-radius: 12px;
     }
 
     .review-box h4 {
@@ -781,7 +754,6 @@ footer p {
     @media (max-width: 700px) {
       .review-box {
         grid-template-columns: 1fr;
-        padding: 22px;
       }
 
       .types-table {
@@ -856,23 +828,23 @@ footer p {
         <p class="section-label">2 / Submissions</p>
         <h2>Call for Papers</h2>
 
+        <p>
+            By providing access through textual and speech modalities, foundation models increasingly shape social interactions, access to information, and decision-making, yet they can reproduce and reinforce existing inequalities through biased data, design, and deployment practices. Despite growing attention to bias and fairness in Natural Language Processing, research often overlooks the structural conditions that affect marginalized communities, including their silencing, underrepresentation, and exclusion, and leading to unintended forms of discrimination.
+        </p>
+
         <div class="callout">
           <p>
-            By providing access through textual and speech modalities, foundation models increasingly shape social interactions, access to information, and decision-making, yet they can reproduce and reinforce existing inequalities through biased data, design, and deployment practices. Despite growing attention to bias and fairness in Natural Language Processing, research often overlooks the structural conditions that affect marginalized communities, including their silencing, underrepresentation, and exclusion, and leading to unintended forms of discrimination.
-          </p>
-            
-          <p>  
             The growing adoption of Large Language Models (LLMs) in language technologies and content moderation further amplifies these concerns, raising fundamental questions about the social implications of NLP systems: Whose knowledge is represented? Whose needs and perspectives are prioritized? Which communities remain underserved, misrepresented, or exposed to harm?
           </p>
-
-          <p>  
-            Addressing these challenges requires moving beyond purely technical approaches towards socially grounded, context-aware NLP that incorporates diverse perspectives and situated knowledge and needs of affected communities. This workshop aims to foster interdisciplinary dialogue across social sciences, psychology, philosophy of language, computer science, and NLP, bringing together researchers and practitioners to critically assess existing approaches, and explore alternative frameworks and practices for developing more equitable, inclusive, and socially responsible language technologies.
-          </p>
-
-          <!-- Add the official call for papers and submission link here. -->
         </div>
 
-        <h3 class="topics-heading" id="topics"><em>Topics of Interest</em></h3>
+        <p>
+            Addressing these challenges requires moving beyond purely technical approaches towards socially grounded, context-aware NLP that incorporates diverse perspectives and situated knowledge and needs of affected communities. This workshop aims to foster interdisciplinary dialogue across social sciences, psychology, philosophy of language, computer science, and NLP, bringing together researchers and practitioners to critically assess existing approaches, and explore alternative frameworks and practices for developing more equitable, inclusive, and socially responsible language technologies.
+        </p>
+
+        <!-- Add the official call for papers and submission link here. -->
+
+        <h3 class="topics-heading" id="topics">Topics of Interest</h3>
 
         <p>
           We welcome contributions on (but not limited to) the following topics:
@@ -880,31 +852,26 @@ footer p {
 
         <ol class="topic-grid">
           <li class="topic-card">
-            <span class="topic-num">01</span>
             <h4>Community-based approaches</h4>
             <p>Challenges, limitations, and opportunities of participatory design and community engagement, and new frameworks and methodologies across fields.</p>
           </li>
 
           <li class="topic-card">
-            <span class="topic-num">02</span>
             <h4>Data collection and annotation practices</h4>
             <p>Collaborative data collection, crowdsourcing platforms, community-driven annotation, limitations of current annotation practices, and the role of linguistic technologies in mitigating bias and addressing under-representation.</p>
           </li>
 
           <li class="topic-card">
-            <span class="topic-num">03</span>
             <h4>Intersectionality as a framework</h4>
             <p>Integrating intersecting identities and perspectives into computational linguistics, with attention to bias, exclusion, marginalization, and representation.</p>
           </li>
 
           <li class="topic-card">
-            <span class="topic-num">04</span>
             <h4>Multiple-perspective annotation schemas and tools</h4>
             <p>Schemas, guidelines, and tools that capture disagreement, subjectivity, and diverse viewpoints while addressing quality, consistency, and representativeness.</p>
           </li>
 
           <li class="topic-card">
-            <span class="topic-num">05</span>
             <h4>Bias, fairness, and representation</h4>
             <p>Methods for identifying, understanding, and mitigating bias in language data and NLP systems, especially where it affects marginalized communities.</p>
           </li>
@@ -914,7 +881,7 @@ footer p {
           We particularly encourage interdisciplinary, community-based and participatory work that involves underrepresented communities and speakers of low-resource languages across the whole research pipeline.
         </p>
 
-        <h3 class="topics-heading" id="submission-types"><em>Submission Types</em></h3>
+        <h3 class="topics-heading" id="submission-types">Submission Types</h3>
 
         <p>
           The workshop will accept the following types of submissions. Page limits exclude references.
@@ -962,7 +929,7 @@ footer p {
           <li>Accepted long and short papers will be given an additional page of content to address reviewer comments.</li>
         </ul>
 
-        <h3 class="topics-heading" id="review"><em>Submission &amp; Review</em></h3>
+        <h3 class="topics-heading" id="review">Submission &amp; Review</h3>
 
         <p>
           Submissions are open to all.
@@ -1237,7 +1204,7 @@ footer p {
         </p>
 
         <p>
-          <a>href="mailto:fata.workshop@gmail.com"<em>fata.workshop@gmail.com</em></a>
+          <a href="mailto:fata.workshop@gmail.com">fata.workshop@gmail.com</a>
         </p>
 
         <!-- Replace this section with the official contact email. -->
