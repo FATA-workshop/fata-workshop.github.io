@@ -641,35 +641,22 @@ footer p {
 
 
     /* Call for Papers: topics, submission types, review */
-    .topic-grid {
-      list-style: none;
-      padding: 0;
-      margin: 24px 0 28px;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 18px;
+    .topic-list {
+      margin: 18px 0 28px;
+      padding-left: 1.4em;
     }
 
-    .topic-card {
-      background: var(--cream);
-      border: 1px solid var(--line);
-      border-top: 4px solid var(--green);
-      border-radius: 10px;
-      padding: 22px 24px;
-    }
-
-    .topic-card h4 {
-      margin: 0 0 8px;
-      font-size: 1.05rem;
-      color: var(--teal-dark);
-    }
-
-    .topic-card p {
-      margin: 0;
-      text-align: left;
-      font-size: 0.95rem;
+    .topic-list li {
+      margin-bottom: 12px;
       line-height: 1.6;
-      color: var(--muted);
+    }
+
+    .topic-list li::marker {
+      color: var(--green);
+    }
+
+    .topic-list strong {
+      color: var(--teal-dark);
     }
 
     .types-table {
@@ -850,32 +837,13 @@ footer p {
           We welcome contributions on (but not limited to) the following topics:
         </p>
 
-        <ol class="topic-grid">
-          <li class="topic-card">
-            <h4>Community-based approaches</h4>
-            <p>Challenges, limitations, and opportunities of participatory design and community engagement, and new frameworks and methodologies across fields.</p>
-          </li>
-
-          <li class="topic-card">
-            <h4>Data collection and annotation practices</h4>
-            <p>Collaborative data collection, crowdsourcing platforms, community-driven annotation, limitations of current annotation practices, and the role of linguistic technologies in mitigating bias and addressing under-representation.</p>
-          </li>
-
-          <li class="topic-card">
-            <h4>Intersectionality as a framework</h4>
-            <p>Integrating intersecting identities and perspectives into computational linguistics, with attention to bias, exclusion, marginalization, and representation.</p>
-          </li>
-
-          <li class="topic-card">
-            <h4>Multiple-perspective annotation schemas and tools</h4>
-            <p>Schemas, guidelines, and tools that capture disagreement, subjectivity, and diverse viewpoints while addressing quality, consistency, and representativeness.</p>
-          </li>
-
-          <li class="topic-card">
-            <h4>Bias, fairness, and representation</h4>
-            <p>Methods for identifying, understanding, and mitigating bias in language data and NLP systems, especially where it affects marginalized communities.</p>
-          </li>
-        </ol>
+        <ul class="topic-list">
+          <li><strong>Community-based approaches:</strong> Challenges, limitations, and opportunities of participatory design and community engagement, and new frameworks and methodologies across fields.</li>
+          <li><strong>Data collection and annotation practices:</strong> Collaborative data collection, crowdsourcing platforms, community-driven annotation, limitations of current annotation practices, and the role of linguistic technologies in mitigating bias and addressing under-representation.</li>
+          <li><strong>Intersectionality as a framework:</strong> Integrating intersecting identities and perspectives into computational linguistics, with attention to bias, exclusion, marginalization, and representation.</li>
+          <li><strong>Multiple-perspective annotation schemas and tools:</strong> Schemas, guidelines, and tools that capture disagreement, subjectivity, and diverse viewpoints while addressing quality, consistency, and representativeness.</li>
+          <li><strong>Bias, fairness, and representation:</strong> Methods for identifying, understanding, and mitigating bias in language data and NLP systems, especially where it affects marginalized communities.</li>
+        </ul>
 
         <p class="encourage">
           We particularly encourage interdisciplinary, community-based and participatory work that involves underrepresented communities and speakers of low-resource languages across the whole research pipeline.
