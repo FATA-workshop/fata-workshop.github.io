@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -700,7 +701,7 @@ footer p {
       </div>
     </section>
 
-    <section id="cfp">
+        <section id="cfp">
       <div class="container">
         <p class="section-label">2 / Submissions</p>
         <h2>Call for Papers</h2>
@@ -721,78 +722,123 @@ footer p {
           <!-- Add the official call for papers and submission link here. -->
         </div>
 
-        <h3 class="topics-heading"><em>Topics of Interest</em></h3>
+        <h3 class="topics-heading" id="topics"><em>Topics of Interest</em></h3>
 
         <p>
-        We welcome contributions on (but not limited to) the following topics:
+          We welcome contributions on (but not limited to) the following topics:
         </p>
 
-        <div class="topics">
-          <article class="topic">
-            <h3>Community-based approaches:</h3>
-            <p>
-            Challenges, limitations, and opportunities of participatory design and community engagement, and new frameworks and methodologies across fields.
-            </p>
-          </article>
+        <ol class="topic-grid">
+          <li class="topic-card">
+            <span class="topic-num">01</span>
+            <h4>Community-based approaches</h4>
+            <p>Challenges, limitations, and opportunities of participatory design and community engagement, and new frameworks and methodologies across fields.</p>
+          </li>
 
-          <article class="topic">
-            <h3>Data collection and annotation practices:</h3>
-            <p>
-            Collaborative data collection, crowdsourcing platforms, community-driven annotation, limitations of current annotation practices, and the role of linguistic technologies in mitigating bias and addressing under-representation.
-            </p>
-          </article>
+          <li class="topic-card">
+            <span class="topic-num">02</span>
+            <h4>Data collection and annotation practices</h4>
+            <p>Collaborative data collection, crowdsourcing platforms, community-driven annotation, limitations of current annotation practices, and the role of linguistic technologies in mitigating bias and addressing under-representation.</p>
+          </li>
 
-          <article class="topic">
-            <h3>Intersectionality as a framework:</h3>
-            <p>
-            Integrating intersecting identities and perspectives into computational linguistics, with attention to bias, exclusion, marginalization, and representation.
-            </p>
-          </article>
+          <li class="topic-card">
+            <span class="topic-num">03</span>
+            <h4>Intersectionality as a framework</h4>
+            <p>Integrating intersecting identities and perspectives into computational linguistics, with attention to bias, exclusion, marginalization, and representation.</p>
+          </li>
 
-          <article class="topic">
-            <h3>Multiple-perspective annotation schemas and tools:</h3>
-            <p>
-            Schemas, guidelines, and tools that capture disagreement, subjectivity, and diverse viewpoints while addressing quality, consistency, and representativeness.
-            </p>
-          </article>
+          <li class="topic-card">
+            <span class="topic-num">04</span>
+            <h4>Multiple-perspective annotation schemas and tools</h4>
+            <p>Schemas, guidelines, and tools that capture disagreement, subjectivity, and diverse viewpoints while addressing quality, consistency, and representativeness.</p>
+          </li>
 
-          <article class="topic">
-            <h3>Bias, fairness, and representation:</h3>
-            <p>
-            Methods for identifying, understanding, and mitigating bias in language data and NLP systems, especially where it affects marginalized communities.
-            </p>
-          </article>
+          <li class="topic-card">
+            <span class="topic-num">05</span>
+            <h4>Bias, fairness, and representation</h4>
+            <p>Methods for identifying, understanding, and mitigating bias in language data and NLP systems, especially where it affects marginalized communities.</p>
+          </li>
+        </ol>
 
-          <p> 
-            We particularly encourage interdisciplinary, community-based and participatory work that involves underrepresented communities and speakers of low-resource languages across the whole research pipeline.
-          </p>
+        <p class="encourage">
+          We particularly encourage interdisciplinary, community-based and participatory work that involves underrepresented communities and speakers of low-resource languages across the whole research pipeline.
+        </p>
 
-
-        </div>
-
-        <h3 class="topics-heading"><em>Submission</em></h3>
+        <h3 class="topics-heading" id="submission-types"><em>Submission Types</em></h3>
 
         <p>
-        Submission is electronic, using OpenReview. 
-        Submissions are open to all and must be in English (PDF).
-        Submission link: 
-        </p> 
+          The workshop will accept the following types of submissions. Page limits exclude references.
+        </p>
 
-        <p> 
-        The workshop will accept three types of submissions:
-        </p> 
+        <table class="types-table">
+          <thead>
+            <tr>
+              <th scope="col">Type</th>
+              <th scope="col">Length</th>
+              <th scope="col">Proceedings</th>
+              <th scope="col">Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Long paper</th>
+              <td class="pages">Up to 8 pages</td>
+              <td>Archival</td>
+              <td>Previously published papers cannot be accepted.</td>
+            </tr>
+            <tr>
+              <th scope="row">Short paper</th>
+              <td class="pages">Up to 4 pages</td>
+              <td>Archival</td>
+              <td>Previously published papers cannot be accepted.</td>
+            </tr>
+            <tr>
+              <th scope="row">Position paper, demo, annotation scheme, checklist</th>
+              <td class="pages">Up to 8 pages</td>
+              <td>&mdash;</td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">Non-archival submission</th>
+              <td class="pages">Up to 2 pages</td>
+              <td>Non-archival</td>
+              <td>To summarise and showcase in-progress work and work published elsewhere.</td>
+            </tr>
+          </tbody>
+        </table>
 
-        <ol>
-        <li> Academic Papers (long and short): Long papers of up to 8 pages, excluding references, and short papers of up to 4 pages, excluding references. Unlimited pages for references and appendices. Accepted papers will be given an additional page of content to address reviewer comments. Previously published papers cannot be accepted.</li>
-        <li> Non-Archival Submissions: Up to 2 pages, excluding references, to summarise and showcase in-progress work and work published elsewhere.</li>
-        <li> Position papers, Demo, Annotation scheme and Checklist: up to 8 pages, excluding references.</li>
-        </ol>
-         
-        
-        <p> 
-        All papers undergo double-blind review by at least two reviewers, with final acceptance decisions made by the workshop organisers based on the scores provided. Scientific papers will be evaluated based on relevance, significance of contribution, impact, technical quality, scholarship, and quality of presentation.
-       </p> 
-         
+        <ul class="fine-print">
+          <li>Long and short papers: unlimited pages for references and appendices.</li>
+          <li>Accepted long and short papers will be given an additional page of content to address reviewer comments.</li>
+        </ul>
+
+        <h3 class="topics-heading" id="review"><em>Submission &amp; Review</em></h3>
+
+        <p>
+          Submissions are open to all.
+        </p>
+
+        <div class="review-box">
+          <div>
+            <h4>How it works</h4>
+            <p>
+              Submission is electronic, using OpenReview. Papers must be in English (PDF). All papers undergo double-blind review by at least two reviewers, with final acceptance decisions made by the workshop organisers based on the scores provided.
+            </p>
+            <!-- TODO: replace href="#" with the OpenReview submission link -->
+            <a class="button button-primary" href="#" target="_blank" rel="noopener noreferrer">Submit on OpenReview</a>
+          </div>
+          <div>
+            <h4>Evaluation criteria</h4>
+            <ul class="criteria">
+              <li>Relevance</li>
+              <li>Significance of contribution</li>
+              <li>Impact</li>
+              <li>Technical quality</li>
+              <li>Scholarship</li>
+              <li>Quality of presentation</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
 
